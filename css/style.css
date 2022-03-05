@@ -1,0 +1,695 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'PBGothicOTFBd';
+    src: url('../fonts/PBGothicOTFBd.eot');
+    src: url('../fonts/PBGothicOTFBd.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PBGothicOTFBd.woff2') format('woff2'),
+        url('../fonts/PBGothicOTFBd.woff') format('woff'),
+        url('../fonts/PBGothicOTFBd.ttf') format('truetype'),
+        url('../fonts/PBGothicOTFBd.svg#PBGothicOTFBd') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PBGothicOTFRg';
+    src: url('../fonts/PBGothicOTFRg.eot');
+    src: url('../fonts/PBGothicOTFRg.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PBGothicOTFRg.woff2') format('woff2'),
+        url('../fonts/PBGothicOTFRg.woff') format('woff'),
+        url('../fonts/PBGothicOTFRg.ttf') format('truetype'),
+        url('../fonts/PBGothicOTFRg.svg#PBGothicOTFRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+/* 노르말리아즈 시작 */
+* {
+    box-sizing :border-box;
+    font-family: 'PBGothicOTFRg';
+}
+
+html, body {
+    margin: 0;
+    padding : 0 ;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin : 0
+}
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style : none;
+}
+a{
+    text-decoration : none;
+}
+/* 노르말라이즈 끝 */
+
+/* 라이브러리 시작 */
+.title {
+    font-family: 'PBGothicOTFBd';
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 라이브러리 끝 */
+
+
+/* 커스터마이즈 시작 */
+
+/* Heaeder Part */
+
+header{
+    height: 80px;
+    width :100%;     
+    background-color: #023586;
+    position :fixed;
+    top:0;
+    left:0;
+    z-index: 5;
+}
+
+header>.wrap{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+header>.wrap>.menu1{
+    width: 360px;
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+header>.wrap>.menu1>ul {
+    display: flex;
+}
+header>.wrap>.menu1>ul>li{
+
+}
+header>.wrap>.menu1>ul>li>a{
+    display: block;
+    padding: 0 10px;
+    font-size: 14px;
+    color :#ccc;
+    line-height: 80px;
+    position: relative;
+    transition: color 0.5s;
+
+}
+
+
+header>.wrap>.menu1>ul>li:hover>a{
+    color: #fff;
+}
+
+header>.wrap>.menu1>ul>li>a::after{
+    content: "";
+    position : absolute;
+    width :0%;
+    background-color: #fff;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: width 0.5s;
+}
+
+header>.wrap>.menu1>ul>li:hover>a::after{
+    width :100%;
+}
+
+
+header>.wrap>.logo{
+
+}
+
+header>.wrap>.menu2{
+    width: 360px;
+    display: flex;
+    justify-content: flex-end;
+
+
+}
+header>.wrap>.menu2>ul{
+    display: flex;
+}
+header>.wrap>.menu2>ul>li{
+    
+    
+
+}
+
+header>.wrap>.menu2>ul>li>a{
+    display: block;
+    padding: 0 10px;
+    font-size: 14px;
+    color :#ccc;
+    line-height: 80px;
+    transition: color 0.5s;
+    position: relative;
+}
+
+header>.wrap>.menu2>ul>li:hover>a{
+    color :#fff;
+
+}
+
+header>.wrap>.menu2>ul>li>a::after{
+    content: "";
+    position : absolute;
+    width :0%;
+    background-color: #fff;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: width 0.5s;
+}
+
+header>.wrap>.menu2>ul>li:hover>a::after{
+    width :100%;
+}
+   
+header>.wrap>.menu2>ul>li:last-child>a::after{
+    background-color: transparent;
+
+}
+
+
+
+/* Main Part */
+
+#banner{
+    width : 100%;
+    padding-top: 80px;
+    display: flex;
+}
+#banner>.mainImg {
+    width :calc(100% / 3);
+    position: relative;
+    
+
+}
+#banner>.mainImg>img{
+    width: 100%;
+    display: block;
+}
+
+#banner>.mainImg>.darkCover{
+    width : 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    left :0;
+    top :0;
+    transition:background-color 0.5s;
+
+}
+
+#banner>.mainImg:hover>.darkCover{
+    background-color: rgba(0,0,0,0);
+}
+
+#mazine{
+    padding: 100px 0;
+    width: 1200px;
+    margin:0 auto;
+
+}
+
+#mazine>.tit {
+    padding: 0 10px 40px;
+    display :flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+#mazine>.tit>h3{
+    font-weight: bold;
+    color:#333;
+    font-size: 18px;
+}
+
+#mazine>.tit>a {
+    display: block;
+    color :#999;
+    font-size: 14px;
+    border-bottom: 1px solid #999;
+
+}
+
+#mazine>.tit>a::before{
+    content:"  +  " ;
+
+
+
+}
+#mazine>.tit>a:hover {
+    color :#023586;
+    border-bottom: 1px solid #023586;
+}
+
+
+#mazine>.wrap{
+    display: flex;
+    flex-wrap: wrap;
+ 
+
+}
+
+#mazine>.wrap>.maBox {
+    width : calc(100% / 3 - 20px ); 
+    margin: 0 10px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+#mazine>.wrap>.maBox>img {
+   width : 100% ; 
+   display: block;
+   
+}
+
+#mazine>.wrap>.maBox>.darkCover{
+    position: absolute;
+    top : 100%;
+    left :0;
+    width :100% ;
+    height : 100%;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+    transition: 1s;
+   
+
+}
+#mazine>.wrap>.maBox:hover>.darkCover{
+    top :0 ;
+}
+
+#mazine>.wrap>.maBox>.bottomCover{
+    position: absolute;
+    bottom :0%;
+    left : 0 ;
+    padding: 16px;
+    width :100%;
+
+}
+#mazine>.wrap>.maBox>.bottomCover>h4{
+    font-size: 24px;
+    color :#fff;
+    padding-bottom: 20px;
+    text-shadow: 0 0 4px rgba(0,0,0,0.6);
+
+}
+#mazine>.wrap>.maBox>.bottomCover>p{
+    font-size: 14px;
+    color :#fff;
+    text-shadow: 0 0 4px rgba(0,0,0,0.6);
+
+
+}
+
+#story {
+    width : 1200px;
+    padding-bottom: 100px;
+    margin : 0 auto;
+    
+}
+
+#story>.tit {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding:0  10px 40px;
+}
+
+#story>.tit>h3{
+    font-weight :bold;
+    font-size : 18px;
+    color :#333;
+}
+
+#story>.tit>a{
+    display: block;
+    font-size: 14px;
+    border-bottom: 1px solid #999;
+    color : #999;
+
+}
+
+#story > .tit > a::before {
+    content : " + "; 
+}
+
+#story > .tit > a:hover {
+    color : #023586;
+    border-bottom: 1px solid #023586;
+}
+
+#story > .wrap  {
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+
+/* 스스로 연습 시작 */
+
+
+#story >.wrap>.maBox{
+    width : 50%;
+    padding: 0 10px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    /* border : 2px solid red; */
+
+
+}
+
+
+#story>.wrap>.maBox>.imgPart{
+    width : 50%;
+    position: relative;
+    overflow: hidden;
+
+
+}
+
+#story>.wrap>.maBox>.imgPart>img{
+    display: block;
+    width : 100%;
+
+}
+
+#story >.wrap > .maBox> .imgPart > .darkCover{
+    position: absolute;
+    top : 100% ;
+    left : 0;
+    width :100% ;
+    height : 100%;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+    transition: top 1s;
+}
+
+#story >.wrap > .maBox> .imgPart:hover> .darkCover{
+    top : 0%;
+}
+
+
+
+
+#story>.wrap>.maBox>.txtPart{
+    width : 50% ;
+    padding: 10px;
+    
+}
+
+#story > .wrap > .maBox > .txtPart > span {
+    display: block;
+    padding-bottom: 30px;
+    padding-top: 5px;
+    color : #023586;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+    font-size: 16px;
+    font-weight : bold;
+}
+
+#story > .wrap > .maBox > .txtPart > h3 {
+    padding-bottom: 15px;
+
+}
+
+#story > .wrap > .maBox > .txtPart > p {
+    font-size: 14px;
+}
+
+
+
+#prom{
+    width: 1200px;
+    margin : 0 auto;
+}
+
+#prom>.tit {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 0 10px 40px;
+
+}
+
+#prom>.tit > h3 {
+    color : #333;
+    font-weight: bold;
+    
+}
+
+#prom>.tit > a {
+    color : #999 ;
+    border-bottom: 1px solid #999;
+}
+
+#prom >.tit >a::before {
+    content : " + ";
+}
+
+#prom >.tit > a:hover {
+    color : #023586;
+    border-bottom: 3px solid #023586;
+  
+} 
+#prom > .cont {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+#prom > .cont > .stBox {
+    width : 25% ;
+    padding : 0 10px 40px;
+    
+
+}
+
+#prom >.cont >.stBox> .imgPart {
+    width :100%;
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+
+}
+ 
+#prom >.cont>.stBox>.imgPart > img{
+    display: block;
+    width: 100%;
+}
+
+
+#prom >.cont>.stBox>.imgPart > .darkCover{
+    position: absolute;
+    top : 0%;
+    left : 0 ;
+    width : 100%;
+    height : 100%;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+    transition: top 1s; 
+}
+
+#prom >.cont>.stBox>.imgPart:hover> .darkCover{
+    top : 100% ;
+
+}
+
+
+
+
+
+
+#prom >.cont>.stBox>.imgPart >.miniBox {
+    position: absolute;
+    top: 0 ;
+    left : 0;
+    background-color : darkblue;
+    color : #fff;
+    font-size: 5px ;
+    width : 45px;
+    height : 16px;
+    vertical-align:middle;
+    text-align : center;
+
+}
+#prom >.cont>.stBox>.txtPart{
+    padding : 10px;
+}
+#prom >.cont>.stBox>.txtPart>h3 {
+    font-size : 15px;
+}
+
+#prom >.cont>.stBox>.txtPart>a{
+    font-size : 12px;
+    color : #999;
+}
+
+
+#quick {
+    position: fixed;
+    bottom : 20px;
+    right : 20px ;
+    width :80px;
+    background-color: #023586 ;
+    padding:10px;
+    border-radius: 6px;
+}
+#quick > ul >li {
+    padding: 20px 0;
+
+}
+
+#quick > ul >li{
+    border-bottom: 1px solid #fff;
+} 
+
+#quick > ul >li >a {
+    display: block;
+    font-size: 12px;
+    text-align: center;
+    color :#bbb;
+    
+}
+
+#quick > ul >li:hover >a{
+    color : #fff;
+
+} 
+
+
+#quick > ul >li > span {
+    display: block;
+}
+#quick > ul >li > .icon {
+
+}
+
+
+#quick > ul >li > a >.icon > img {
+   
+}
+
+#quick > ul >li > a > .text {
+    font-size: 0.7em;
+    display: block;
+}
+
+#notice {
+    padding-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#notice >.noticeList {
+    width : calc(100% / 3 );
+    background-color: #eee;
+    padding: 40px 60px 40px 40px;
+    background-image: url(../img/chevron-up.svg);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 20px) 50%;
+    background-size: auto 40px;
+    position: relative;
+}
+
+#notice >.noticeList::before {
+    content:"";
+    width: 1px;
+    height: 50%;
+    background-color: #023586;
+    position: absolute;
+    left : 0 ;
+    top : 50% ;
+    
+}
+    
+#notice >.noticeList>span {
+    display: block;
+    color :#023586;
+    padding-bottom: 20px;
+}
+
+#notice >.noticeList>h3 {
+    width: 100%;
+    font-size: 18px;
+    color : #555;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+/* #story > .wrap > .maBox {
+    width : 50% ;
+    padding : 0 10px 20px;
+    background: #ccc;
+    border : 1px solid #000;
+    display: flex;
+    flex-wrap: wrap;
+    
+
+}
+#story > .wrap > .maBox>.imgPart{
+    width : 50%;
+    
+}
+#story > .wrap > .maBox>.imgPart>img{
+    width : 100%;
+
+
+
+}
+
+#story > .wrap > .maBox>.txtPart{
+    width : 50%;
+    padding: 10px;
+
+}
+
+#story > .wrap > .maBox>.txtPart>span{
+    font-size: 14px ;
+    color : #023586;
+    display: block;
+    padding-bottom: 16px;
+    padding-top: 8px;
+}
+
+#story > .wrap > .maBox>.txtPart>h3 */
+
+
+
+
+
+/* 커스터마이즈 끝 */
